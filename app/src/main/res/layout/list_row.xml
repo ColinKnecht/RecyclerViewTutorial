@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:padding="2dp">
+
+    <ImageView
+        android:id="@+id/iv_thumbnail"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        app:srcCompat="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/tv_article_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/iv_thumbnail"
+        android:layout_toRightOf="@+id/iv_thumbnail"
+        android:maxLines="2"
+        android:paddingLeft="3dp"
+        android:textSize="18sp"
+        tools:text="Goosebumps"/>
+
+    <TextView
+        android:id="@+id/tv_subreddit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iv_thumbnail"
+        android:layout_toEndOf="@+id/iv_thumbnail"
+        android:layout_toRightOf="@+id/iv_thumbnail"
+        android:paddingLeft="3dp"
+        tools:text="subReddit"/>
+
+    <TextView
+        android:id="@+id/tv_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tv_subreddit"
+        android:paddingRight="3dp"
+        tools:text="R.L. Stine"/>
+
+    <TextView
+        android:id="@+id/tv_URL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:layout_toLeftOf="@+id/tv_author"
+        android:layout_toStartOf="@+id/tv_author"
+        android:maxLines="0"
+        tools:text="URL"/>
+
+</RelativeLayout>
