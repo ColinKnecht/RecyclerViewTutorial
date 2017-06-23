@@ -10,7 +10,7 @@ import android.widget.TextView;
  * Created by colinknecht on 6/23/17.
  */
 
-public class ListViewRowHolder extends RecyclerView.ViewHolder {
+public class ListRowViewHolder extends RecyclerView.ViewHolder {
 
     protected ImageView thumbnail;
     protected TextView title;
@@ -19,7 +19,7 @@ public class ListViewRowHolder extends RecyclerView.ViewHolder {
     protected TextView url;
     protected RelativeLayout mRelativeLayout;
 
-    public ListViewRowHolder(View view) {
+    public ListRowViewHolder(View view) {
         super(view);
         this.thumbnail = (ImageView) view.findViewById(R.id.iv_thumbnail);
         this.title = (TextView) view.findViewById(R.id.tv_title);
