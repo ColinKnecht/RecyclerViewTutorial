@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.android.volley.toolbox.ImageLoader;
+
 import java.util.List;
 
 /**
@@ -19,7 +21,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<ListRowViewHolder> {
 
     private List<ListItems> mListItemsList;
     private Context mContext;
-    //ImageLoader from volley.jar?
+    private ImageLoader mImageLoader;
     private int focusedItem = 0;
 
     public MyRecyclerAdapter(Context context, List<ListItems> itemsList) {
@@ -53,10 +55,10 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<ListRowViewHolder> {
         listRowViewHolder.itemView.setSelected(focusedItem == position);
 
         listRowViewHolder.getLayoutPosition();
-//         mImageLoader = MySingleton.getInstance(mContext).getImageLoader();
+         mImageLoader = MySingleton.getInstance(mContext).getImageLoader();
 
-//        listRowViewHolder.thumbnail.setImageURI(listItems.getThumbnail(), mImageLoader);
-//        listRowViewHolder.thumbnail.setDefaultImageResId(R.drawable.reddit_placeholder);
+//        listRowViewHolder.thumbnail.setImageUrl(listItems.getThumbnail(), mImageLoader);
+        listRowViewHolder.thumbnail.setDefaultImageResId(R.drawable.reddit_placeholder);
 
         listRowViewHolder.title.setText(Html.fromHtml(listItems.getTitle()));
         listRowViewHolder.subReddit.setText(Html.fromHtml(listItems.getSubreddit()));
